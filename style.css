@@ -1,14 +1,15 @@
 html.touch *:hover {
     all:unset!important;
+    pointer-events: none;
 }
 p{
     margin: 0;
 }
-
-/* a:focus, a:hover{
-    /* color: #fff;
-    
-}*/
+a:focus, a:hover{
+    text-decoration: none;
+    /* color: inherit !important; */
+    color: unset !important;
+}
 
 .aside{
     display: none;
@@ -84,7 +85,7 @@ body{
     border-bottom: 1px solid #EBEDED;
     margin-bottom: 30px;
 }
-.list-item:last-child{
+.block-list-item.list-item:last-child{
     margin-bottom: 0;
 }
 .block-list-item{
@@ -108,6 +109,7 @@ body{
 
 .block-item-period{
     color: #1E2124;
+    cursor: pointer;
     border-bottom: 1px solid #1E2124;
 }
 .block-item-type{
@@ -118,6 +120,7 @@ body{
     align-items: center;
     justify-content: center;
     color: #fff;
+    cursor: pointer;
 }
 .type-green{
     background-color: #5EB877;
@@ -163,4 +166,27 @@ body{
 
 .block-list-archive .dropdown-list-item{
     justify-content: space-between;
+}
+
+.block-pagination-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pagination-block{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.pagination-item.active{
+    background-color: #37A3F5;
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.pagination-item{
+    color: #000;
+    cursor: pointer;
 }
